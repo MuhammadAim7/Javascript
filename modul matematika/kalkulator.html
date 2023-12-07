@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+      <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+     <!-- As a link -->
+<nav class="navbar bg-light">
+     <div class="container-fluid">
+       
+          <h1>Wellcome to Web Modul Matematic</h1>
+     </div>
+   </nav>
+   
+   <!-- As a heading -->
+   <nav class="navbar bg-light">
+        <h3>dimana semua yang kau butuhkan untuk mengerjakan tugas Matematika mu ada di sini</h3>
+     <div class="container-fluid">
+       
+     </div>
+   </nav>
+     
+<div class="content">
+<center>
+
+  <div class="kalkulator">
+    
+    <h3>--kalkulator--</h3>
+<tr>
+  <td>Bil 1 :</td>
+  <td><input type="number"  id="bil1"></td>
+</tr>
+<br>
+<tr>
+  <td>Bil 2 :</td>
+  <td><input type="number" id="bil2"></td>
+</tr>
+<br>
+<tr>
+  <td>
+    
+    operator :
+  <select id="operator">
+    <option value="">pilih operator</option>
+    <option value="+"> + </option>
+    <option value="-"> - </option>
+    <option value="x"> X </option>
+    <option value="/"> / </option>
+  </select>
+  
+</td>
+</tr>
+
+<br>
+
+<tr>
+
+  <td>
+    <button type="button" class="btn btn-outline-info" onclick="run()">Submit</button>
+    
+    
+  </td>
+  <td>
+    <button type="reset" class="btn btn-outline-danger" onclick="reset()">Reset</button>
+  </td>
+  
+  </td>
+  <br>
+  <br>
+</tr>
+
+<tr>
+  <td>
+    Hasil ; <label id="hasil">-----</label>
+  </td>
+</tr>
+</tr>
+
+<br>
+
+<a href="index.html" ><button type="button" class="btn btn-outline-warning">kembali</button></a>
+
+</center>
+<script>
+  function run(){
+    var a = parseInt( document.getElementById('bil1').value);
+    var b = parseInt( document.getElementById('bil2').value);
+    var op = document.getElementById('operator').value;
+   var hasil 
+   switch (op) {
+    case "+":
+        hasil = a + b;
+        break;
+    case "-":
+        hasil = a - b;
+        break;
+    case "x":
+        hasil = a * b;
+        break;
+    case "/":
+        hasil = a / b;
+        break;
+    default:
+        alert('Silahkan isi Billanagan terlebih dahulu')
+        break;
+}
+
+document.getElementById('hasil').innerHTML=hasil;
+    
+function reset(){
+    a.value= ""
+    b.value= ""
+}
+  }
+
+</script>
+
+</body>
+</html>
